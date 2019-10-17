@@ -136,7 +136,7 @@
 		}
 
 		tw-hook[name="result"] {
-			font-size: 3em;
+			font-size: 2.5em;
 			line-height: 1.5em;
 		}
 
@@ -239,14 +239,14 @@
 			|answer&gt;[[[Ja-&gt;23]] [[Nein-&gt;23]]]
 			(if: $sex is &quot;girl&quot;)[$girlbg](else:)[$boybg]</tw-passagedata>
 		<tw-passagedata pid="24" name="23" tags="" position="2360,45" size="100,100">Möchtest du studieren?
-			|answer&gt;[[[Ja,-&gt;24]] [[Wozu?-&gt;24]]]
+			|answer&gt;[[[Ja-&gt;24]] [[Wozu?-&gt;24]]]
 			(if: $sex is &quot;girl&quot;)[$girlbg](else:)[$boybg]</tw-passagedata>
 		<tw-passagedata pid="25" name="24" tags="" position="2645,35" size="100,100">Willst du Karriere machen?
 			|answer&gt;[[[Ja, ohne Moos nichts los-&gt;Ergebnis]] [[Wozu?-&gt;Ergebnis]]]
 			(if: $sex is &quot;girl&quot;)[$girlbg](else:)[$boybg]</tw-passagedata>
 		<tw-passagedata pid="4" name="Ergebnis" tags="" position="2649,230" size="100,100">(if: $sex is
 			&quot;girl&quot;)|result&gt;[Du wirst ein Heimchen am Herd](else:)|result&gt;[Du wirst Geschäftsführer
-			eines Dax Unternehmens]
+			eines technischen Unternehmens]
 			(if: $sex is &quot;girl&quot;)[$girlbg](else:)[$boybg]</tw-passagedata>
 	</tw-storydata>
 

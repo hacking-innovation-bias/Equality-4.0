@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>Choose your own future</title>
 	<style title="Twine CSS">
+		/*Teilw. Eigenes CSS*/
 		tw-link,
 		.link,
 		tw-icon,
@@ -153,7 +154,10 @@
 </head>
 
 <body>
+	<!--
+Twine Code
 
+-->
 	<tw-story></tw-story>
 
 	<tw-storydata name="Choose your own future" startnode="1" creator="Twine" creator-version="2.3.5"
@@ -162,14 +166,27 @@
 
 		</style>
 		<script role="script" id="twine-user-script" type="text/twine-javascript"></script>
+
+		<!--Fragen. Die meisten Fragenseiten bestehen aus 3 Zeilen eigenem Inhalt. Beispiel an Frage 3:
+
+		
+		Sind deine Eltern noch zusammen? -> Die Frage
+		|answer&gt;[[[Ja-&gt;5]] [[Nein-&gt;5]]] -> Die antwortmöglichkeiten. mit |answer&gt;[] werden diese in ein html Element tw-hook gesetzt, dessen Attribut name auf antwort gesetzt wird
+		(if: $sex is &quot;girl&quot;)[$girlbg](else:)[$boybg]</tw-passagedata> -> An anfang wurde ausgewählt, ob Mädchen oder Junge spielt. Hiermit wird der Hintergrund entsprechend eingefärbt
+
+		-->
 		<tw-passagedata pid="1" name="start" tags="" position="249,96" size="100,100">Welches Geschlecht bist du?
 			|answer&gt;[ [[Junge]] [[Mädchen]]]
 			(set: $bgstyle to &quot;663399&quot;)
 			&lt;style&gt; tw-story{ background: white;}&lt;/style&gt;
+			<!--Im folgenden werden die variablen für den Hintergrund erstellt-->
 			(set: $girlbg to &quot;&lt;style&gt; tw-story{ background: pink;}&lt;/style&gt;&quot;)
 			(set: $boybg to &quot;&lt;style&gt; tw-story{ background: lightskyblue;}&lt;/style&gt;&quot;)
 		</tw-passagedata>
-		<tw-passagedata pid="2" name="Junge" tags="" position="553,113" size="100,100">(set: $sex to &quot;boy&quot;)
+		<tw-passagedata pid="2" name="Junge" tags="" position="553,113" size="100,100">
+			<!--In der ersten Frage wurde Junge als Geschlecht gewählt, daher wird jetzt die variable $sex auf boy gesetzt,
+				 um später das entsprechende Ergebnis anzuzeigen -->
+			(set: $sex to &quot;boy&quot;)
 			Kommst du aus gutem Elternhaus?
 			|answer&gt;[[[Na, selbstverständlich-&gt;4]] [[Eltern was?-&gt;4]]]
 			(if: $sex is &quot;girl&quot;)[$girlbg](else:)[$boybg]</tw-passagedata>
@@ -244,7 +261,9 @@
 		<tw-passagedata pid="25" name="24" tags="" position="2645,35" size="100,100">Willst du Karriere machen?
 			|answer&gt;[[[Ja, ohne Moos nichts los-&gt;Ergebnis]] [[Wozu?-&gt;Ergebnis]]]
 			(if: $sex is &quot;girl&quot;)[$girlbg](else:)[$boybg]</tw-passagedata>
-		<tw-passagedata pid="4" name="Ergebnis" tags="" position="2649,230" size="100,100">(if: $sex is
+		<tw-passagedata pid="4" name="Ergebnis" tags="" position="2649,230" size="100,100">
+			<!--Das Ergebnis. Je nachdem, was am Anfang gewählt wird, wird hier ein Anderes Ergebnis angezeigt.-->
+			(if: $sex is
 			&quot;girl&quot;)|result&gt;[Du wirst ein Heimchen am Herd](else:)|result&gt;[Du wirst Geschäftsführer
 			eines technischen Unternehmens]
 			(if: $sex is &quot;girl&quot;)[$girlbg](else:)[$boybg]</tw-passagedata>

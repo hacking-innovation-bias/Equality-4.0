@@ -2,7 +2,7 @@
     <img src="Equality40.png" height="128">
 </p>
 
-# Equality 4.0
+# [Equality 4.0](https://hacking-innovation-bias.github.io/Equality-4.0/)
 
 <p align="center">Choose your own Future!<p>
 <p align="center" alt='Screenshot; Frage: "Wer ist eher dein Vorbild?" Antwortmöglichkeiten: "Barbie", "Superman"'>
@@ -42,4 +42,4 @@ Hergestellt wurden die Handyhalter im Laserdrucker. Für die männliche Version 
 
 ## Dokumentation
 
-Die Dokumentation befindet sich [hier](dokumentation.pdf).
+Die Dokumentation befindet sich [hier](Dokumentation.pdf).

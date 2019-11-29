@@ -38,7 +38,7 @@ Hergestellt wurden die Handyhalter im Laserdrucker. Für die männliche Version 
 
 ### Endergebnis:
 
-![8](Fotos/8.jpg) ![9](Fotos/9.jpg)
+![8](Fotos/8.jpg)
 
 ## Dokumentation
 
